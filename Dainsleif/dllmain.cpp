@@ -110,6 +110,9 @@ DWORD WINAPI fMain ( LPVOID lpParameter )
     hookEndScene ( );
     HookLockCursor ( );
 
+    g_csgo.cvar->FindCommand ( "clear" )->Dispatch ( );
+    g_csgo.cvar->ConsoleColorPrint ( CColor::Magenta ( ), "Injected Dainsleif!\n" );
+
     std::vector< Player* > playerList;
 
     //MUST save this to use as a flag cuz the value of local player's gonna be stored at the same address even the match ended.

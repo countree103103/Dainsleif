@@ -1,6 +1,7 @@
 #pragma once
 #include "../pch.h"
 
+#include "CCvar.h"
 #include "CInput.h"
 #include "ISurface.h"
 #include "IVEngineClient.h"
@@ -12,6 +13,7 @@ class CInterfaceList
 public:
     void Initialize ( );
 public:
+    CCvar* cvar = nullptr;
     IVEngineClient* engine = nullptr;
     ISurface* surface = nullptr;
     CInput* input = nullptr;
